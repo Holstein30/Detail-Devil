@@ -53,7 +53,7 @@ const store = new MongoDBStore({
 
 app.use(
   session({
-    secret: "I love New York",
+    secret: process.env.secret,
     resave: true,
     saveUninitialized: true,
     store: store
